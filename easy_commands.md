@@ -85,7 +85,7 @@
        * First run log: `./run_jupyter.log`
            * Make sure 'jupyter_log.log' exits and chmod to 777: 
            * log content: `nohup jupyter notebook --allow-root --ip=0.0.0.0  > jupyter_log.log 2>&1 &`
-       * Then grep address with tocken: `tail jupyter_log.log`
+       * Then grep address with token: `tail jupyter_log.log`
        * Toubleshooting:
            * In container/docker: need to change ip to the `-ip=0.0.0.0` instead of the actual ip address in ./run_jupyter.log
     2. 3D Construction
