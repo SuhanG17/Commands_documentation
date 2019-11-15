@@ -25,4 +25,4 @@ exec docker run --rm -it \
     -p ${PORT22}:22 \
     -p ${PORT6006}:6006 \
     -p ${PORT8888}:8888 \
-	pytorch/pytorch:latest #modify accordingly
+	pytorch/pytorch:latest # modify to the assigned tag-name 
