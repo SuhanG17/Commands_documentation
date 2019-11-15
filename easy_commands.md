@@ -64,8 +64,8 @@
     2. Copy files across servers: *e.g.*
         *  Want to move files stored in another sever `192.168.6.202` at dir `/data01/tomcat-8.5/webapps/export_files`
         *  Current server `192.168.2.152` destination dir `/develenv/guosh/CellDet_yolo2/input_pipeline/zip_label`
-        *  File names all includes key word `正式_宫颈图像标注`
-        *  Do `scp 正式_宫颈图像标注* root@192.168.2.152:/develenv/guosh/CellDet_yolo2/input_pipeline/zip_label`
+        *  File names all includes key word `some_shared_keyword_in_name`
+        *  Do `scp some_shared_keyword_in_name* root@192.168.2.152:/develenv/guosh/CellDet_yolo2/input_pipeline/zip_label`
 
 
 *   <font size= '4'> **Package Mangement** </font> 
