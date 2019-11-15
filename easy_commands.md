@@ -5,7 +5,7 @@
 
 *   <font size= '4'> **Build image with DockerFile [official tutorial](https://docs.docker.com/get-started/part2/)** </font> 
     1. Download the image file from docker hub e.g. [docker for pytorch](https://hub.docker.com/r/pytorch/pytorch/tags)  
-    2. Have Dockerfile ready to include all the packages you want to add to the downloaded image [DockerFile](https://github.com/SuhanG17/Commands_documentation/blob/master/README.md)  
+    2. Have Dockerfile ready to include all the packages you want to add to the downloaded image [DockerFile](https://github.com/SuhanG17/Commands_documentation/example_file/blob/master/DockerFile)  
         p.s. `DockerFile` can't have other file name, thus ensure that you only have one in the current folder.
     3. Command to build image: `docker build --tag=pytorch/pytorch:1.2-cuda10.0-cudnn7-devel-[Modify version num here]  . `  
         p.s. The period at the end is to refer to the current directory, DO NOT forget the "[space]."
