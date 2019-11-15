@@ -5,7 +5,7 @@
 
 *   <font size= '4'> **Build image with DockerFile [official tutorial](https://docs.docker.com/get-started/part2/)** </font> 
     1. Download the image file from docker hub e.g. [docker for pytorch](https://hub.docker.com/r/pytorch/pytorch/tags)  
-    2. Have Dockerfile ready to include all the packages you want to add to the downloaded image [DockerFile](https://github.com/SuhanG17/Commands_documentation/example_file/DockerFile)  
+    2. Have Dockerfile ready to include all the packages you want to add to the downloaded image [DockerFile](https://github.com/SuhanG17/Commands_documentation/blob/master/example_file/DockerFile)  
         p.s. `DockerFile` can't have other file name, thus ensure that you only have one in the current folder.
     3. Command to build image: `docker build --tag=pytorch/pytorch:1.2-cuda10.0-cudnn7-devel-[Modify version num here]  . `  
         p.s. The period at the end is to refer to the current directory, DO NOT forget the "[space]."
@@ -21,7 +21,7 @@
        
        
 *   <font size= '4'> **Initiate container from image** </font>
-    1. A bash file to set parameters, e.g. [docker_start_dldevelop_tf-1.13.1-gpu-py3_1.1.2.sh](https://github.com/SuhanG17/Commands_documentation/example_file/docker_start_dldevelop_tf-1.13.1-gpu-py3_1.1.2.sh) 
+    1. A bash file to set parameters, e.g. [docker_start_dldevelop_tf-1.13.1-gpu-py3_1.1.2.sh](https://github.com/SuhanG17/Commands_documentation/example_file/blob/master/docker_start_dldevelop_tf-1.13.1-gpu-py3_1.1.2.sh) 
     2. Commnand to initiate container:
          `./docker_start_dldevelop_tf-1.13.1-gpu-py3_1.1.2.sh guosh docker_guosh 0,1 /develenv/guosh /root/guosh 12203 16603 18803`
          `./docker_start_dldevelop_tf-1.13.1-gpu-py3_1.1.2.sh guosh_pytorch docker_guosh_pytorch 0,1 /develenv/guosh_pytorch/docker_pytorch /root/guosh/guosh_pytorch 12207 16607 18807`
