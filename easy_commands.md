@@ -73,7 +73,7 @@
 
 
 *   <font size= '4'> **TensorFlow** </font> 
-    1. Use Tensorboard: `ttensorboard --host=[address] --logdir=[log dir]` *e.g* `tensorboard --host=192.168.2.180 --logdir=blood_3`  
+    1. Use Tensorboard: `tensorboard --host=[address] --logdir=[log dir]` *e.g* `tensorboard --host=192.168.2.180 --logdir=blood_3`  
       p.s. if docker: the host address 0.0.0.0 will automaticaly point to the right position  
           1. tensorboard --host=0.0.0.0 --logdir=[log_dir]
           2. when you need to view in web page, input the actual address with correct port num: *e.g.* <http://192.168.2.152:16603>
@@ -97,7 +97,18 @@
     
 *   <font size= '4'> **Darknet/YOLO** </font> 
     1. Build model from Dartknet weights: `python ./yad2k.py yolov2.cfg yolov2.weights model_data/yolov2.h5`
-
+    
+*   <font size= '4'> **Anaconda Virtual Envs** </font> 
+    1. To avoid the "time out" error from `conda install` or `pip install` directly, reference to this [article](https://blog.csdn.net/weixin_33824363/article/details/92073697)
+    2. Find the binary `.whl` document:
+        1. `torch` and `torchvision` will be found [here](https://pytorch.org/get-started/previous-versions/) as `.whl` files under `Mac and misc. binaries`. Find the correct version as needed.
+    3. Create a new env: `conda create -n [new_env] python = [python_version]`
+    4. Enter a new env: `conda activate [new_env]`
+    5. Install dependencies: `conda install -n [new_env] numpy pyyaml mkl mkl-include setuptools cmake cffi typing pillow six`
+       p.s. `pillow` and `six` are added for `torchvision` 
+    6. Intsall Pytorch: `conda install -n [new_env] pytorch`
+    
+    
 ## 3. Miscellaneous
 
 *   <font size= '4'> **Medical Image Processing** </font> 
