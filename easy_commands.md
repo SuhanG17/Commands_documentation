@@ -104,9 +104,18 @@
         1. `torch` and `torchvision` will be found [here](https://pytorch.org/get-started/previous-versions/) as `.whl` files under `Mac and misc. binaries`. Find the correct version as needed.
     3. Create a new env: `conda create -n [new_env] python = [python_version]`
     4. Enter a new env: `conda activate [new_env]`
-    5. Install dependencies: `conda install -n [new_env] numpy pyyaml mkl mkl-include setuptools cmake cffi typing pillow six`
+    5. Install the binary pkgs: `pip install [pkg path]`
+    6. Install dependencies: `conda install -n [new_env] numpy pyyaml mkl mkl-include setuptools cmake cffi typing pillow six`
        p.s. `pillow` and `six` are added for `torchvision` 
-    6. Intsall Pytorch: `conda install -n [new_env] pytorch`
+    7. Install Pytorch: `conda install -n [new_env] pytorch`
+    8. To access multiple envs as kernel in jupyter notebook, refer to this [blog](https://blog.csdn.net/Mrxxyz/article/details/84866504): 
+        1. in `[base]` env, do `conda install nb_conda`
+        2. activate `[new_env]`, install `ipykernel` use `pip install ipykernel`
+        3. add kernel to notebook: `python -m ipykernel install --user --name [new_env] --display-name [new_env_name_in_display]`
+        4. p.s. if you want to connect to jupyter kernel remotely, (i.e. using `vscode`), check the following:
+           * open jupyter config `vim .jupyter/jupyter_notebook_config.py`
+           * ensure that `c.NotebookApp.allow_remote_access = True` without a `#` in the front
+           * for password and more, refer to this [article](https://zhuanlan.zhihu.com/p/54149717)
     
     
 ## 3. Miscellaneous
